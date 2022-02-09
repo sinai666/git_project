@@ -23,6 +23,7 @@ git add .
 
 github网站建立git_project项目。
 git remote add origin https://github.com/wlwlf/git_project.git
+git commit -m 'a'
 git push -u origin master
 
 对抗GFW干扰：
