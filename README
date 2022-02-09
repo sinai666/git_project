@@ -1,0 +1,56 @@
+Github简明教程
+
+一，下载git Windows版：<a href="https://gitforwindows.org/">https://gitforwindows.org/</a>
+
+二，告诉git命令登录github的用户名和邮箱。
+git config --global user.name x
+git config --global user.email x@x.com
+
+三，生成一个密钥（邮箱当然要和登录邮箱一致）
+ssh-keygen -t rsa -C "x@x.com"
+
+添加生成的pubkey到github（网站操作）。然后用
+ssh -T git@github.com
+测试
+
+
+在空文件夹git_project内
+git init
+将这个文件夹变成一个git项目目录。
+
+github网站建立git_project项目。
+git remote add origin https://github.com/wlwlf/git_project.git
+git push -u origin master
+
+对抗GFW干扰：
+修改.git/config文件里面，修改repo的url连接，从https修改为git协议就可以了。
+本来是 url = https://github.com/wlwlf/test.git
+修改为
+    url = ssh://git@github.com/wlwlf/test.git
+
+
+
+git clone git://github.com/yourname/test.git<br>
+git clone git://github.com/yourname/grit.git mypro#克隆到自定义文件夹
+
+本地
+
+git add *#跟踪新文件
+
+rm *&git rm *#移除文件
+git rm -f *#移除文件
+git rm --cached *#取消跟踪
+git mv file_from file_to#重命名跟踪文件
+
+git commit#提交更新
+git commit -m 'message'
+git commit -a#跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交
+git commit --amend#修改最后一次提交
+
+git reset HEAD *#取消已经暂存的文件
+
+git checkout -- file#取消对文件的修改（从暂存区去除file）
+git checkout branch|tag|commit -- file_name#从仓库取出file覆盖当前分支
+git checkout -- .#从暂存区去除文件覆盖工作区
+
+分支
