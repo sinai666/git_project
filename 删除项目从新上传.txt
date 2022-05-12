@@ -1,0 +1,14 @@
+1，删除github的repo
+2，建立同名repo
+3，删除.git
+4,
+git init
+git add .
+git remote add origin https://github.com/wlwlf/www.git
+git commit -m '0'
+git push -u origin master
+
+5,登录cloudflare
+6，找到pages
+
+
