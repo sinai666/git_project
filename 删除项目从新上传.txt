@@ -4,12 +4,9 @@
 4,
 git init
 git add .
-//git remote add origin https://github.com/wlwlf/www.git
-git remote add origin git@github.com:wlwlf/www.git
+git remote add origin git@github.com:sinim31/www.git
 git commit -m '0'
 git push -u origin master
 
 5,登录cloudflare
 6，找到pages
-
-
